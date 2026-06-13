@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/searchatlas-favicon-1.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/searchatlas-favicon-1.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/searchatlas-favicon-1.png"/>
+    <title>How Privacy-Focused Offline AI Works Without Internet: A Technical Guide</title>
+    <meta name="title" content="How Privacy-Focused Offline AI Works Without Internet: A Technical Guide"/>
+    <meta name="description" content="Discover Off-Grid AI’s powerful offline AI solutions. Achieve privacy, resilience, and independence with our internet-free, retrieval-first AI assistant."/>
+    <meta name="keywords" content="[&#x27;offline AI&#x27;, &#x27;privacy focused AI&#x27;, &#x27;AI without internet&#x27;, &#x27;offline AI assistant&#x27;, &#x27;retrieval first AI&#x27;, &#x27;offline AI assistant&#x27;, &#x27;privacy focused AI&#x27;, &#x27;AI without internet&#x27;, &#x27;Off-Grid AI&#x27;]"/>
+    <link rel="manifest" href="/favicon/site.webmanifest"/>
+    <meta name="theme-color" content="#6366f1"/>
+    <meta property="og:image" content="https://storage.googleapis.com/content-assistant-images-persistent/d45bdc15-371c-4ad8-b1c9-30d305cf3522.webp"/>
+    <meta property="og:type" content="website"/>
+<meta property="og:title" content="How Privacy-Focused Offline AI Works Without Internet: A Technical Guide"/>
+<meta property="og:description" content="Discover Off-Grid AI’s powerful offline AI solutions. Achieve privacy, resilience, and independence with our internet-free, retrieval-first AI assistant."/>
+<meta property="og:site_name" content="Off-Grid AI"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="How Privacy-Focused Offline AI Works Without Internet: A Technical Guide"/>
+<meta name="twitter:description" content="Discover Off-Grid AI’s powerful offline AI solutions. Achieve privacy, resilience, and independence with our internet-free, retrieval-first AI assistant."/>
+<meta name="twitter:image" content="https://storage.googleapis.com/content-assistant-images-persistent/d45bdc15-371c-4ad8-b1c9-30d305cf3522.webp"/>
+<meta name="robots" content="index, follow"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/output.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/extra.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/fonts.css" rel="stylesheet">
+
+    <style>
+        /* SaaS/Tech Modern Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            position: relative;
+            z-index: 0;
+        }
+        @media (min-width: 640px) {
+            body {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            body {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1280px) {
+            body {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        /* Fix for fixed navbar - add scroll padding to all anchor targets */
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+        /* Ensure main content doesn't hide under navbar */
+        main {
+            margin-top: 0;
+            padding-top: 0;
+            position: relative;
+            z-index: 1;
+        }
+        /* Prevent content overlap */
+        section {
+            position: relative;
+            overflow: visible;
+            clear: both;
+            display: block;
+            width: 100%;
+            z-index: 1;
+        }
+        /* Ensure proper spacing between sections */
+        section + section {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        /* Prevent any negative margins */
+        * {
+            box-sizing: border-box;
+        }
+        /* Ensure containers don't overflow */
+        .container {
+            width: 100%;
+            max-width: 100%;
+            overflow: visible;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        /* Ensure max-width containers have proper margins */
+        .max-w-7xl,
+        .max-w-4xl,
+        .max-w-5xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Hero section right side image container */
+        .hero-image-container {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+        }
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            min-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .hero-image-container {
+                max-width: 100%;
+            }
+            .hero-image-container img {
+                min-height: 450px;
+                max-height: 650px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-image-container img {
+                min-height: 500px;
+                max-height: 700px;
+            }
+        }
+        /* Navbar height fix and z-index */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+            margin: 0;
+            padding: 0;
+        }
+        .cid-saas-tech {
+            height: auto;
+            min-height: 80px;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+        /* Ensure navbar nav and container don't interfere */
+        .cid-saas-tech nav,
+        .cid-saas-tech .container {
+            position: relative;
+            z-index: 1;
+        }
+        /* Button container for SaaS buttons */
+        .saas-btn-container {
+            flex-direction: column;
+            width: 90% !important;
+        }
+        @media (min-width: 768px) {
+            .saas-btn-container {
+                flex-direction: row;
+                gap: 1.25rem;
+            }
+        }
+        .saas-btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+            transition: all 0.3s;
+            white-space: nowrap;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .saas-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+        }
+        .saas-btn-secondary {
+            background: transparent;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .saas-btn-secondary:hover {
+            background: #6366f1;
+            color: white;
+        }
+        /* CTA Section Buttons */
+        .saas-cta-btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            width: 90%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .saas-cta-btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-size: 18px;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .saas-cta-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+        }
+        .saas-cta-btn-secondary {
+            background: white;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-size: 18px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .saas-cta-btn-secondary:hover {
+            background: #6366f1;
+            color: white;
+        }
+        .feature-box {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+            margin: 0;
+        }
+        @media (min-width: 768px) {
+            .feature-box {
+                padding: 2rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .feature-box {
+                padding: 2rem;
+            }
+        }
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15);
+            border-color: #6366f1;
+        }
+        .feature-box p {
+            flex-grow: 1;
+            overflow-wrap: break-word;
+            min-height: 60px;
+        }
+        .feature-box img {
+            margin-top: auto;
+        }
+        .activeCard .chevron-icon {
+            transform: rotate(180deg);
+        }
+        .panel-body {
+            display: none;
+        }
+        .activeCard .panel-body {
+            display: block;
+        }
+        .panel-title {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 100%;
+        }
+        .panel-title:hover {
+            opacity: 0.8;
+        }
+        /* Footer specific styles */
+        .footer-section {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            margin-top: 0;
+            padding-bottom: 3rem;
+        }
+        @media (min-width: 768px) {
+            .footer-section {
+                padding-top: 4rem;
+            }
+        }
+        .footer-section .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-section .grid {
+            align-items: start;
+            justify-items: start;
+        }
+        .footer-section h5 {
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .footer-section ul {
+            width: 100%;
+        }
+        .footer-section li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .footer-section .border-t {
+            padding-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            section[id] {
+                scroll-margin-top: 90px;
+            }
+            #bannerSection {
+                margin-top: 80px !important;
+                padding-top: 2rem !important;
+            }
+            .cid-saas-tech {
+                min-height: 70px;
+            }
+            header {
+                min-height: 70px;
+            }
+            .footer-section .grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-section {
+                padding-top: 2rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Off-Grid AI",
+    "url": "https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide",
+    "description": "Discover Off-Grid AI’s powerful offline AI solutions. Achieve privacy, resilience, and independence with our internet-free, retrieval-first AI assistant."
+}
+</script>
+
+</head>
+<body>
+<div id="__next" style="background: #fafafa;">
+    <header style="position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 9999; background-color: white; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <section class="menu menu1 cid-saas-tech py-4 bg-white shadow-sm" style="position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 9999 !important; height: auto; min-height: 80px; background-color: white !important; margin: 0; padding: 1rem 0;">
+            <nav class="navbar navbar-expand-lg px-0" style="position: relative; z-index: 1;">
+                <div class="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8 max-w-7xl" style="position: relative; z-index: 1;">
+                    <div class="navbar-brand">
+                        <span class="navbar-caption-wrap" style="display: flex; align-items: center; gap: 10px;">
+                            
+                            <a class="navbar-caption text-2xl md:text-3xl font-bold display-7" style="color: #6366f1; text-decoration: none;" href="#bannerSection">Off-Grid AI</a>
+                        </span>
+                    </div>
+                    <ul class="flex gap-4 md:gap-6 lg:gap-8 text-sm md:text-base lg:text-lg font-medium items-center" style="color: #1f2937; list-style: none; margin: 0; padding: 0; position: relative; z-index: 1; gap: 10px;">
+                        <li><a href="#featuresSection" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit;">Features</a></li>
+                        <li><a href="#faqSection" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit;">FAQ</a></li>
+                        <li><a href="#locationSection" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit;">Location</a></li>
+                        <li><a href="#contactSection" class="saas-btn-primary text-sm md:text-base px-4 py-2 md:px-6 md:py-3" style="text-decoration: none; position: relative; z-index: 1;">Get Started</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    
+    <main style="overflow-x: hidden; overflow-y: visible; width: 100%; position: relative;">
+        <!-- Hero Section -->
+        <section id="bannerSection" class="pt-24 md:pt-32 pb-16 md:pb-20 lg:pb-24 bg-gradient-to-br from-[#f8fafc] to-[#e0e7ff]" style="margin-top: 80px; padding-top: 4rem; padding-bottom: 3rem;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+                <div class="flex md:flex-row gap-8 md:gap-12 lg:gap-16 flex-col items-center">
+                    <div class="flex-1 w-full md:w-auto text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8" style="color: #111827; line-height: 1.2; font-size: 36px; font-weight: bold; padding-bottom: 5px;">
+                            How Privacy-Focused Offline AI Works Without Internet: A Technical Guide
+                        </h1>
+                        <p class="text-lg md:text-xl lg:text-xl mb-8 md:mb-10 opacity-90" style="color: #374151; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center;">
+                            <div class="_chunkWrapper_6ta1u_30">
+<p class="font-claude-response-body break-words whitespace-normal"><span class="_animating_6ta1u_10" data-newtext-seq="0">Off-Grid AI is a </span><span class="_animating_6ta1u_10" data-newtext-seq="17">veteran-owned, family-run technology </span><span class="_animating_6ta1u_10" data-newtext-seq="54">company built around a single core </span><span class="_animating_6ta1u_10" data-newtext-seq="89">mission: delivering capable, verifiable </span><span class="_animating_6ta1u_10" data-newtext-seq="129">artificial intelligence that </span><span class="_animating_6ta1u_10" data-newtext-seq="158">works when the internet doesn't. </span><span class="_animating_6ta1u_10" data-newtext-seq="191">Developed under the Elastic Thoughts </span><span class="_animating_6ta1u_10" data-newtext-seq="228">umbrella and closely </span><span class="_animating_6ta1u_10" data-newtext-seq="249">aligned with the </span><span class="_animating_6ta1u_10" data-newtext-seq="266">preparedness-focused team behind </span><span class="_animating_6ta1u_10" data-newtext-seq="299">Mountain Ready, Off-Grid AI produces </span><span class="_animating_6ta1u_10" data-newtext-seq="336">fully offline, deterministic, </span><span class="_animating_6ta1u_10" data-newtext-seq="366">citation-bound knowledge systems </span><span class="_animating_6ta1u_10" data-newtext-seq="399">designed for grid-down scenarios, </span><span class="_animating_6ta1u_10" data-newtext-seq="433">remote field operations, and any </span><span class="_animating_6ta1u_10" data-newtext-seq="466">setting where cloud dependency is a </span><span class="_animating_6ta1u_10" data-newtext-seq="502">vulnerability rather than a </span><span class="_animating_6ta1u_10" data-newtext-seq="530">convenience. Every system ships on </span><span class="_animating_6ta1u_10" data-newtext-seq="565">physical media, requires no account or </span><span class="_animating_6ta1u_10" data-newtext-seq="604">subscription, and transmits zero </span><span class="_animating_6ta1u_10" data-newtext-seq="637">data &mdash; by architecture, not just </span><span class="_animating_6ta1u_10" data-newtext-seq="670">by policy.</span></p>
+<p class="font-claude-response-body break-words whitespace-normal">&nbsp;</p>
+</div>
+<div class="_chunkWrapper_6ta1u_30">
+<p class="font-claude-response-body break-words whitespace-normal"><span class="_animating_6ta1u_10" data-newtext-seq="0">Privacy and offline </span><span class="_animating_6ta1u_10" data-newtext-seq="20">resilience are not features added to </span><span class="_animating_6ta1u_10" data-newtext-seq="57">Off-Grid AI &mdash; they are the reason it </span><span class="_animating_6ta1u_10" data-newtext-seq="94">exists. The team behind this </span><span class="_animating_6ta1u_10" data-newtext-seq="123">product understands from experience </span><span class="_animating_6ta1u_10" data-newtext-seq="159">that the moments when you most need </span><span class="_animating_6ta1u_10" data-newtext-seq="195">reliable information are often the </span><span class="_animating_6ta1u_10" data-newtext-seq="230">exact moments when cloud </span><span class="_animating_6ta1u_10" data-newtext-seq="255">infrastructure is unavailable, </span><span class="_animating_6ta1u_10" data-newtext-seq="286">compromised, or simply not trustworthy. </span><span class="_animating_6ta1u_10" data-newtext-seq="326">Building an AI system that performs </span><span class="_animating_6ta1u_10" data-newtext-seq="362">without internet, keeps every query </span><span class="_animating_6ta1u_10" data-newtext-seq="398">on the user's own hardware, and grounds </span><span class="_animating_6ta1u_10" data-newtext-seq="438">every factual answer in a </span><span class="_animating_6ta1u_10" data-newtext-seq="464">verifiable source document is the </span><span class="_animating_6ta1u_10" data-newtext-seq="498">direct expression of that </span><span class="_animating_6ta1u_10" data-newtext-seq="524">understanding.</span></p>
+<p class="font-claude-response-body break-words whitespace-normal">&nbsp;</p>
+</div>
+<div class="_chunkWrapper_6ta1u_30">
+<p class="font-claude-response-body break-words whitespace-normal"><span class="_animating_6ta1u_10" data-newtext-seq="0">This technical </span><span class="_animating_6ta1u_10" data-newtext-seq="15">guide, originally published on the </span><span class="_animating_6ta1u_10" data-newtext-seq="50">Off-Grid AI blog at offgridai.io, </span><span class="_animating_6ta1u_10" data-newtext-seq="84">breaks down exactly how privacy-focused </span><span class="_animating_6ta1u_10" data-newtext-seq="124">offline AI works &mdash; covering local </span><span class="_animating_6ta1u_10" data-newtext-seq="158">processing, on-device retrieval, </span><span class="_animating_6ta1u_10" data-newtext-seq="191">cryptographic integrity, deterministic </span><span class="_animating_6ta1u_10" data-newtext-seq="230">output, and the architecture that makes </span><span class="_animating_6ta1u_10" data-newtext-seq="270">it possible to deliver genuinely </span><span class="_animating_6ta1u_10" data-newtext-seq="303">capable AI with zero outbound network </span><span class="_animating_6ta1u_10" data-newtext-seq="341">calls. You can read the original </span><span class="_animating_6ta1u_10" data-newtext-seq="374">article here: How </span><span class="_animating_6ta1u_10" data-newtext-seq="392">Privacy-Focused Offline AI Works </span><span class="_animating_6ta1u_10" data-newtext-seq="425">Without Internet: A Technical </span><span class="_animating_6ta1u_10" data-newtext-seq="455">Guide (</span><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://offgridai.io/blogs/news/h%EE%80%80ow-privacy-focused-offline-ai-works-%EE%80%80without-internet-a-technical-guide)%EE%80%80"><span class="_animating_6ta1u_10" data-newtext-seq="455">https://offgridai.io/blogs/news/h</span><span class="_animating_6ta1u_10" data-newtext-seq="495">ow-privacy-focused-offline-ai-works-</span><span class="_animating_6ta1u_10" data-newtext-seq="531">without-internet-a-technical-guide)</span></a><span class="_animating_6ta1u_10" data-newtext-seq="566">.</span></p>
+</div>
+<div class="_chunkWrapper_6ta1u_30"><hr class="border-border-200 border-t-0.5 my-3 mx-1.5"></div>
+<div class="_chunkWrapper_6ta1u_30">
+<p class="font-claude-response-body break-words whitespace-normal">&nbsp;</p>
+</div>
+                        </p>
+                        <div class="saas-btn-container" style="margin-bottom: 1.5rem;">
+                            <a href="https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide" class="saas-btn-primary text-lg text-center " target="_blank" rel="noopener">
+                                🚀 Get Started
+                            </a>
+                            <a href="#featuresSection" class="saas-btn-secondary text-lg text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full md:w-auto">
+                        <div class="hero-image-container">
+                            <img class="rounded-2xl shadow-2xl" src="https://storage.googleapis.com/content-assistant-images-persistent/d45bdc15-371c-4ad8-b1c9-30d305cf3522.webp" alt="How Privacy-Focused Offline AI Works Without Internet: A Technical Guide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        
+        <section id="featuresSection" class="py-16 md:py-20 lg:py-24" style="margin-top: 1rem; padding-top: 3rem; padding-bottom: 4rem; clear: both; display: block;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl" style="overflow: visible;">
+                <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style="color: #111827; margin-bottom: 1rem;">Offline AI Solutions for Privacy and Independence</h2>
+                    <p class="text-lg md:text-xl opacity-70" style="color: #374151; margin-bottom: 0;">Powerful features designed for modern teams</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12" style="margin-bottom: 0; gap: 5px;">
+                    
+                    <div class="feature-box" style="margin-bottom: 0;">
+                        <div class="text-5xl mb-4" style="flex-shrink: 0; display: block; text-align: center; margin-bottom: 1.5rem;">💎</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" style="color: #6366f1; margin-bottom: 1rem; flex-shrink: 0; display: block;">What Is Privacy-Focused Offline AI?</h3>
+                        <p class="opacity-80 text-base leading-relaxed" style="line-height: 1.7; margin-bottom: 1rem; flex-grow: 1; overflow-wrap: break-word; display: block;"><p>Privacy-focused offline AI refers to AI systems designed to run effectively without any internet connection. Instead of sending prompts to a remote data center, these systems perform every step of the process — interpreting the question, retrieving relevant knowledge, and generating the answer — locally, on the user's own hardware. Nothing leaves the machine.</p>
+<br />
+<p>This local-first design is what makes the privacy guarantee real rather than merely promised. When there is no network call, there is no telemetry to leak, no cloud log to subpoena, and no third party in the loop at any stage. The result is an AI system that can be used in sensitive, remote, or deliberately private settings without compromising the confidentiality of the data being processed.</p>
+<br />
+<p>Off-Grid AI is built around exactly these principles. The system runs entirely offline after first boot, with zero outbound network calls — a property that can be confirmed by inspecting network activity while it runs. There is no telemetry by default, no cloud callback, and no data exfiltration path, because the architecture simply has nowhere to send data. For the self-reliant individual or field team that needs capable AI without cloud dependency, that is the baseline requirement — and it is what Off-Grid AI was built to deliver.</p>
+</p>
+                        
+                        <img src="https://storage.googleapis.com/content-assistant-images-persistent/9dfd7d0f-46a4-4003-a107-a28bb9502fbe.jpeg" class="w-full object-cover rounded-lg" alt="What Is Privacy-Focused Offline AI?" style="width: 100%; height: auto; max-height: 200px; min-height: 150px; object-fit: cover; flex-shrink: 0; display: block; margin-top: 1rem; border-radius: 0.5rem;"/>
+                        
+                    </div>
+                    
+                    <div class="feature-box" style="margin-bottom: 0;">
+                        <div class="text-5xl mb-4" style="flex-shrink: 0; display: block; text-align: center; margin-bottom: 1.5rem;">💎</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" style="color: #6366f1; margin-bottom: 1rem; flex-shrink: 0; display: block;">Edge AI, Local Processing, and the Privacy Architecture</h3>
+                        <p class="opacity-80 text-base leading-relaxed" style="line-height: 1.7; margin-bottom: 1rem; flex-grow: 1; overflow-wrap: break-word; display: block;"><p>Offline AI is built on the foundation of edge AI — the practice of running computation at or near the point where data is generated, rather than on centralized servers. By processing locally, edge AI reduces latency, removes dependence on network bandwidth, and keeps data physically close to its owner. Offline AI takes this one step further by removing the network dependency entirely during normal operation.</p>
+<br />
+<p>The security implications of this architecture are significant. Confining all processing to the local device removes the most common avenues of data exposure: interception during transit, server-side breaches, and silent background telemetry. For anyone handling sensitive material — medical information, legal matters, operational security plans, or personal records — this design represents a meaningful structural improvement over cloud alternatives.</p>
+<br />
+<p>Off-Grid AI reinforces this with layered integrity controls that function without any network connection. Cryptographic signatures and hash verification protect the knowledge base, models, and runtime — if any component is altered, the system detects the mismatch and refuses to run. Device-bound delivery ties the system to specific hardware, so copying the contents to another drive does not produce a working system. Security here is a property of the architecture itself, not a service that requires trusting a third party to maintain.</p>
+</p>
+                        
+                        <img src="https://storage.googleapis.com/content-assistant-images-persistent/384867e9-9646-493c-8698-d324ae449e58.jpeg" class="w-full object-cover rounded-lg" alt="Edge AI, Local Processing, and the Privacy Architecture" style="width: 100%; height: auto; max-height: 200px; min-height: 150px; object-fit: cover; flex-shrink: 0; display: block; margin-top: 1rem; border-radius: 0.5rem;"/>
+                        
+                    </div>
+                    
+                    <div class="feature-box" style="margin-bottom: 0;">
+                        <div class="text-5xl mb-4" style="flex-shrink: 0; display: block; text-align: center; margin-bottom: 1.5rem;">💎</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" style="color: #6366f1; margin-bottom: 1rem; flex-shrink: 0; display: block;">How Offline AI Stays Accurate — Grounding, Determinism, and Fail-Closed Design</h3>
+                        <p class="opacity-80 text-base leading-relaxed" style="line-height: 1.7; margin-bottom: 1rem; flex-grow: 1; overflow-wrap: break-word; display: block;"><p>A common concern about local AI is accuracy — specifically the risk of hallucination, where a model confidently states something that is not true. Off-Grid AI addresses this not with a single technique but with a design philosophy: integrity over coverage, and verification over convenience. The key mechanisms are citation-bound answers, deterministic output, and fail-closed behavior working together.</p>
+<br />
+<p>Citation-bound answers ground every factual statement in a source document from the local knowledge base. Responses are not pulled from a model's open-ended internal memory — they are anchored to retrieved, verifiable material that the user can trace and confirm. Deterministic output means that given the same question and the same knowledge base, the system returns the same answer every time, making it auditable and trustworthy rather than unpredictable.</p>
+<br />
+<p>Fail-closed behavior completes the architecture: when the system does not have enough verified information to answer well, it says so rather than guessing. The design principle is that the system is allowed to be incomplete but not allowed to be incorrect — and not allowed to hallucinate. For preparedness applications where a wrong answer in a medical, mechanical, or security context can have real consequences, this is not a limitation. It is the correct design for a tool people will rely on when it matters most.</p>
+</p>
+                        
+                        <img src="https://storage.googleapis.com/content-assistant-images-persistent/229ca1ad-ffcc-4342-a7f8-d1df9a8ce4a8.jpeg" class="w-full object-cover rounded-lg" alt="How Offline AI Stays Accurate — Grounding, Determinism, and Fail-Closed Design" style="width: 100%; height: auto; max-height: 200px; min-height: 150px; object-fit: cover; flex-shrink: 0; display: block; margin-top: 1rem; border-radius: 0.5rem;"/>
+                        
+                    </div>
+                    
+                    <div class="feature-box" style="margin-bottom: 0;">
+                        <div class="text-5xl mb-4" style="flex-shrink: 0; display: block; text-align: center; margin-bottom: 1.5rem;">💎</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" style="color: #6366f1; margin-bottom: 1rem; flex-shrink: 0; display: block;">The Technical Components That Enable AI Without Connectivity</h3>
+                        <p class="opacity-80 text-base leading-relaxed" style="line-height: 1.7; margin-bottom: 1rem; flex-grow: 1; overflow-wrap: break-word; display: block;"><p>Offline AI relies on several technical components working together. Local hardware provides the compute needed to run inference on-device — modern consumer and professional machines are well within range, with no specialized data-center equipment required. Efficient on-device models made practical through quantization — compressing model weights to lower-precision formats — allow capable AI to run on everyday hardware without sacrificing the reliability needed for real-world field use.</p>
+<br />
+<p>The local retrieval layer is the heart of how offline AI stays both useful and accurate. Source documents are processed into local semantic embeddings and stored in an on-device vector index with no external database or API involved. When a question is asked, the system searches that index for the most relevant material and uses it to ground the answer. Because the entire pipeline runs locally, neither queries nor documents are ever transmitted externally — and every answer carries a traceable path back to the underlying source material.</p>
+<br />
+<p>Off-Grid AI delivers these components in a USB form factor that is practical for field deployment. The complete operating environment — models, knowledge base, retrieval index, and runtime — ships on a single physical drive. Inserting the drive triggers an integrity verification sequence using cryptographic signatures and hash checks; once confirmed, the system initializes and is ready for queries. This plug-and-play workflow removes the configuration burden typically associated with self-hosted AI and operates identically whether the host machine is online or completely disconnected.</p>
+</p>
+                        
+                        <img src="https://storage.googleapis.com/content-assistant-images-persistent/8af6bf2a-ac03-462b-b764-210fa36561bf.jpeg" class="w-full object-cover rounded-lg" alt="The Technical Components That Enable AI Without Connectivity" style="width: 100%; height: auto; max-height: 200px; min-height: 150px; object-fit: cover; flex-shrink: 0; display: block; margin-top: 1rem; border-radius: 0.5rem;"/>
+                        
+                    </div>
+                    
+                    <div class="feature-box" style="margin-bottom: 0;">
+                        <div class="text-5xl mb-4" style="flex-shrink: 0; display: block; text-align: center; margin-bottom: 1.5rem;">💎</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" style="color: #6366f1; margin-bottom: 1rem; flex-shrink: 0; display: block;">Practical Use Cases and the Case for Offline AI in Preparedness</h3>
+                        <p class="opacity-80 text-base leading-relaxed" style="line-height: 1.7; margin-bottom: 1rem; flex-grow: 1; overflow-wrap: break-word; display: block;"><p>Offline AI proves its value most clearly in scenarios where connectivity is unreliable, undesirable, or absent — and where the cost of a wrong or leaked answer is high. Emergency and disaster response, where networks may be down but decisions cannot wait, represents perhaps the clearest use case. Wilderness and field medicine applications — trauma, cardiac, and infection management in austere environments — benefit directly from a system that provides grounded, citation-backed guidance with no signal required.</p>
+<br />
+<p>Homesteaders and off-grid communities have equally direct applications: off-grid power repair, vehicle and equipment troubleshooting, livestock and animal care, and food production guidance are all knowledge domains where reliable offline access matters and where submitting sensitive operational queries to a cloud platform is neither practical nor appropriate. For security-focused users, tactical operations and situational awareness references that never touch an external server represent a meaningful operational security upgrade.</p>
+<br />
+<p>In each of these cases, the same core promise applies: capable, grounded answers, available anywhere, with data remaining entirely under the user's control. Offline AI is not a compromise technology — for privacy-sensitive, field, and off-grid work, it is a better model. More private, more resilient, and more trustworthy than cloud alternatives that depend on infrastructure that may not be available when it matters most. Learn more about how Off-Grid AI is built and what it covers at <a href="https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide">offgridai.io</a>.</p></p>
+                        
+                        <img src="https://storage.googleapis.com/content-assistant-images-persistent/7caa415d-359e-4370-bc75-849685e1369e.jpeg" class="w-full object-cover rounded-lg" alt="Practical Use Cases and the Case for Offline AI in Preparedness" style="width: 100%; height: auto; max-height: 200px; min-height: 150px; object-fit: cover; flex-shrink: 0; display: block; margin-top: 1rem; border-radius: 0.5rem;"/>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+        <!-- FAQ Section -->
+        <section id="faqSection" class="py-16 md:py-20 lg:py-24" style="margin-top: 0;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold" style="color: #111827;">Frequently Asked Questions</h2>
+                </div>
+                <div class="w-full mx-auto space-y-4 md:space-y-5">
+                    <div id="accordion_1" itemscope="itemscope" itemtype="https://schema.org/FAQPage" class="space-y-4 md:space-y-5" style="margin-bottom:1rem; display: flex; flex-direction: column; gap: 10px">
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What is privacy-focused offline AI and how is it different from cloud AI? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Privacy-focused offline AI refers to systems that perform every step of the AI process — interpreting a question, retrieving relevant knowledge, and generating an answer — locally, on the user's own hardware. Nothing leaves the machine. There is no network call, no remote server processing the prompt, and no third party involved at any stage. The privacy guarantee is architectural, not policy-based.</p>
+<br />
+<p>Cloud AI operates in the opposite way. Every prompt submitted is transmitted over the internet to a remote data center, processed on external infrastructure, and returned as a response. Inputs can be logged, analyzed, retained, and potentially used to train future models — often without meaningful user control over how or when that happens.</p>
+<br />
+<p>For self-reliant individuals and preparedness-minded users, the distinction is operationally significant. Cloud AI fails entirely when connectivity is lost and exposes sensitive queries by design. Offline AI keeps working during outages, in remote environments, and in deliberately disconnected settings — and it keeps data exactly where it belongs: on hardware the user controls.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What is edge AI and why is it the foundation of offline systems? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Edge AI is the practice of running artificial intelligence computation at or near the point where data is generated, rather than sending that data to centralized servers. By processing locally, edge AI removes latency introduced by network round-trips, eliminates dependence on bandwidth availability, and keeps data physically close to its owner — under direct control.</p>
+<br />
+<p>Offline AI takes the edge AI model one step further by removing the network dependency entirely. The system does not just process locally during normal use — it has no outbound network calls at all during operation. This makes it suitable for air-gapped environments, grid-down scenarios, and any setting where connectivity is unreliable, undesirable, or absent.</p>
+<br />
+<p>The practical benefits of this local-first design fall into three clear categories: reliability during connectivity loss, complete control over data, and immediate access to responses governed only by local hardware — not network conditions or server availability. For emergency responders, preppers, and field operators, all three of those properties matter enormously.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     How does an offline AI system protect sensitive user data? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>By confining all processing to the local device, offline AI removes the most common avenues of data exposure: interception during transit, server-side breaches, and silent background telemetry. For anyone handling sensitive material — patient information, legal matters, operational security, or personal records — this architecture represents a meaningful structural improvement over cloud-based alternatives.</p>
+<br />
+<p>A well-designed offline AI system reinforces this with layered integrity controls that do not depend on the internet. These include verified zero telemetry — where the default configuration makes no automatic network calls — and cryptographic integrity protections where the knowledge base, models, and runtime are protected with digital signatures and hash verification. If any component is altered, the system detects the mismatch and refuses to run.</p>
+<br />
+<p>Device-bound delivery adds another layer: the system is cryptographically tied to its hardware, meaning copying the contents to another drive does not produce a working system. Crucially, all of these guarantees hold without a network connection. Security is a property of the architecture itself — not a service that depends on trusting a third party to maintain it.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What is retrieval-augmented generation (RAG) and how does it work offline? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Retrieval-augmented generation is a technique that allows an AI system to search a local knowledge base before generating a response. Rather than relying solely on what a model learned during training, a RAG-enabled system converts source documents into local semantic embeddings — numerical representations of meaning — and stores them in an on-device vector index. When a question is submitted, the system searches that index for the most relevant material and uses it to ground the answer.</p>
+<br />
+<p>Because the entire pipeline runs locally, neither queries nor documents are ever transmitted to an external server. Answers are anchored to retrieved sources, which means every factual claim can be traced back to the underlying material — a critical property for high-trust field and reference applications where a wrong answer carries real consequences.</p>
+<br />
+<p>Research consistently shows that grounding model outputs in retrieved documents substantially reduces hallucination compared to relying solely on a model's internal parameters. A properly implemented offline RAG system takes this further by requiring a citation for factual claims and refusing to answer when retrieval is insufficient — a fail-closed approach that treats incomplete information as preferable to an unverified guess.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What does "deterministic output" mean in the context of offline AI? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Deterministic output means that given the same question and the same knowledge base, the system returns the same answer every time. This reproducibility is unusual among generative AI systems, which typically produce slightly different responses to identical prompts due to the statistical sampling methods used during generation. In Off-Grid AI, determinism is a deliberate design choice, not a side effect.</p>
+<br />
+<p>For preparedness and field applications, determinism has significant practical value. It makes the system auditable: you can verify what it will say in response to a known question, compare responses across sessions, and build confidence through consistent, repeatable results. A system that might say something different each time is a liability when the stakes are high.</p>
+<br />
+<p>Combined with citation-bound answers and fail-closed behavior — where the system acknowledges the limits of its knowledge rather than guessing — determinism produces a tool that is trustworthy in a way that open-ended generative AI is not. The design philosophy is integrity over coverage and verification over convenience, which aligns directly with how serious preparedness planning approaches any critical resource.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What is model quantization and why does it matter for running AI locally? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Quantization is a compression technique that reduces the numerical precision of a model's parameters — for example, converting 16-bit floating point values to lower-precision integer formats. This shrinks the memory footprint of the model significantly without eliminating most of its reasoning capability. A model that might require tens of gigabytes of memory at full precision can be reduced to a fraction of that size through quantization.</p>
+<br />
+<p>For offline AI deployments, quantization is what makes local inference practical on consumer and professional hardware rather than requiring specialized data center equipment. Modern laptops and desktops are well within the range needed to run capable quantized models, including on CPU-only machines for smaller model sizes. This accessibility is what has moved local AI from a research concept to a tool that individuals and small teams can actually deploy in the field.</p>
+<br />
+<p>The trade-off is a modest reduction in output quality compared to full-precision inference. In practice, for focused, domain-specific knowledge work — the kind that preparedness and field applications demand — a well-quantized model paired with a local retrieval layer delivers results that are highly competitive with cloud alternatives, while maintaining the privacy and offline resilience that cloud systems cannot offer.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     How does a USB-delivered offline AI system work and what are its advantages? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>A USB-delivered offline AI system packages the complete operating environment — model weights, knowledge base, retrieval index, and runtime software — onto a single physical storage device. The user inserts the drive into a compatible machine, the system verifies its own integrity using cryptographic signatures and hash checks, the local engine initializes against the bundled models and knowledge base, and the user begins querying — fully offline, with no installation or configuration required.</p>
+<br />
+<p>Physical media delivery has meaningful security advantages over network distribution. There is no download to intercept, no account to compromise, and no transmission path that could be monitored. The contents are protected at rest and verified at launch, so the user can confirm that what they're running is exactly what was originally packaged — unmodified and untampered.</p>
+<br />
+<p>Portability is an equally important advantage. A self-contained USB system can be transported, stored securely, and deployed on any compatible host machine across macOS, Windows, and Linux. For preppers and field operators who need a knowledge resource that travels with them and works anywhere a powered device can operate, this form factor is significantly more practical than a locally installed software stack tied to a single machine.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     How does an offline AI system handle updates without compromising its isolation? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Because the knowledge base and models are fixed at build time, the system's behavior is stable and reproducible — it does not silently learn, change, or update at runtime. This stability is a feature, not a limitation. For high-trust reference applications, knowing exactly what version of the knowledge base the system is drawing from is a meaningful reliability property.</p>
+<br />
+<p>When updates are warranted, they are delivered as signed update packages that are cryptographically verified before being applied. This process keeps the door closed to tampering while still allowing the knowledge base to grow over time. Updates are user-initiated, not automatic — nothing changes in the background without the user's awareness and consent.</p>
+<br />
+<p>Optional expansion packs extend the core knowledge base into specialized domains — field medicine, veterinary care, electrical work, mechanical repair, tactical operations, and agriculture — and follow the same verification model. Each addition is a deliberate, confirmed action rather than a background process, maintaining the integrity and isolation of the system while giving users a clear path to expanding its coverage as their needs evolve.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What are the realistic trade-offs of offline AI compared to cloud-based tools? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Offline AI offers strong advantages in privacy, resilience, and trustworthiness — but honest evaluation requires acknowledging the trade-offs. On the hardware side, inference runs on local compute, which means capable — though widely available — hardware is required. Response speed is determined by the host machine's CPU and GPU capabilities rather than by data center resources.</p>
+<br />
+<p>On the knowledge side, a fixed, verified corpus is a deliberate feature for trust and auditability — but it means the knowledge base advances through deliberate, signed releases rather than updating continuously. For most field and reference use cases, this stability is exactly what you want: a consistent, verifiable source that behaves the same way every time. For users who need up-to-the-minute general knowledge on rapidly changing topics, a cloud tool remains a better fit for that specific task.</p>
+<br />
+<p>The competitive picture on accuracy is more nuanced than many assume. Offline systems typically run smaller, quantized models rather than the largest cloud-scale architectures. But for focused, domain-specific work — especially when paired with a local retrieval layer — a grounded offline system can outperform a cloud model that generates confident but unverified responses. For knowledge work where accuracy and verifiability matter more than open-ended creativity, the offline model has a genuine advantage.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                        <div class="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 lg:p-8 hover:border-[#6366f1] transition-all duration-200"
+                             itemscope="itemscope" itemprop="mainEntity" itemtype="https://schema.org/Question" onclick="this.classList.toggle('activeCard')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('activeCard')}">
+                            <button class="panel-title flex items-center justify-between w-full text-left" style="background: none; border: none; cursor: pointer; padding: 0; width: 100%;">
+                                <h3 class="text-lg md:text-xl font-semibold pr-4" itemprop="name" style="color: #111827; margin: 0; padding-right: 16px">
+                                     What types of preparedness knowledge does Off-Grid AI cover? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #6b7280;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4 md:mt-5 opacity-75" itemscope="itemscope" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"><p>Off-Grid AI's core system spans the knowledge domains that matter most when infrastructure fails and decisions cannot wait: field medicine, water procurement and treatment, food production and preservation, off-grid power, emergency communications, navigation, sanitation, personal security, and situational awareness. These foundational domains cover the essential skill sets underpinning serious preparedness planning across a wide range of grid-down and austere scenarios.</p>
+<br />
+<p>Specialized expansion packs extend that core into professional-depth domains. Field medicine packs cover trauma, cardiac, and infection management for austere environments. Veterinary packs address livestock and animal care for homesteaders and farms operating without veterinary access. Electrical and mechanical packs provide off-grid power repair and vehicle troubleshooting capability. Tactical and agricultural packs round out the coverage for security-focused and food-production applications.</p>
+<br />
+<p>The value of this structured knowledge architecture becomes clearest in the scenarios where it matters most: grid-down emergencies, extended wilderness operations, remote homestead situations, and any context where connectivity is absent and the cost of a wrong answer is high. A system that provides grounded, cited, reproducible guidance across all of these domains — without a network connection, without a subscription, and without transmitting a single query to an external server — is a genuinely capable addition to an integrated preparedness plan.</p>
+</p>
+                            </div>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location/Map Section -->
+        <section id="locationSection" class="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#f5f3ff] to-[#ede9fe]" style="margin-top: 0;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 md:mb-12" style="color: #6366f1; margin-bottom: 3rem;">Find Our Office</h2>
+                <div class="w-full">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contactSection" class="py-20 md:py-24 lg:py-28 bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white" style="margin-top: 0;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8" style="color: white; line-height: 1.2; margin-bottom: 1rem;margin-top: 1.5rem;">Ready to Transform Your Business?</h2>
+                <p class="text-lg md:text-xl lg:text-xl mb-10 md:mb-12 opacity-90" style="color: rgba(255, 255, 255, 0.9); line-height: 1.6; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Join thousands of companies already using our platform</p>
+                <div class="saas-cta-btn-container">
+                    <a href="mailto:info@offgridai.io" class="saas-cta-btn-primary">
+                        Contact Us
+                    </a>
+                    <a href="#featuresSection" class="saas-cta-btn-secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#111827] text-white footer-section">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl" style="margin-left: auto; margin-right: auto; padding-top: 3rem; padding-bottom: 3rem;">
+            <div class="grid md:grid-cols-3 gap-8 md:gap-10 lg:gap-12" style="align-items: start;">
+                <div style="margin-bottom: 0;">
+                    <h5 class="text-xl md:text-2xl font-bold mb-4" style="color: #6366f1; margin-bottom: 1rem; display: block;">Off-Grid AI</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed" style="line-height: 1.6; margin-bottom: 0;">How Privacy-Focused Offline AI Works Without Internet: A Technical Guide</p>
+                </div>
+                <div style="margin-bottom: 0;">
+                    <h5 class="text-base md:text-lg font-semibold mb-4 text-gray-200" style="margin-bottom: 1rem; display: block;">Contact</h5>
+                    <ul class="space-y-2 text-sm text-gray-400" style="list-style: none; padding: 0; margin: 0; width: 100%;color:black">
+                        
+                        <li class="flex items-center gap-2" style="margin-bottom: 0.75rem; display: flex; align-items: center;">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="flex-shrink: 0; width: 1rem; height: 1rem;">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <a href="mailto:info@offgridai.io" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; word-break: break-word;">info@offgridai.io</a>
+                        </li>
+                        
+                        
+                        <li class="flex items-center gap-2" style="margin-bottom: 0.75rem; display: flex; align-items: center;">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="flex-shrink: 0; width: 1rem; height: 1rem;">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span>18886745812</span>
+                        </li>
+                        
+                        
+                        <li class="flex items-center gap-2" style="margin-bottom: 0.75rem; display: flex; align-items: center;">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="flex-shrink: 0; width: 1rem; height: 1rem;">
+                                <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; word-break: break-word;" target="_blank" rel="noopener">Off-Grid AI</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div style="margin-bottom: 0;color: black;">
+                    <h5 class="text-base md:text-lg font-semibold mb-4 text-gray-200" style="margin-bottom: 1rem; display: block;">Quick Links</h5>
+                    <ul class="space-y-2 text-sm text-gray-400" style="list-style: none; padding: 0; margin: 0; width: 100%;">
+                        
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://git.searchatlasseo.com/terms-of-service.html" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Terms</a></li>
+                        
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://git.searchatlasseo.com/privacy-policy.html" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Privacy</a></li>
+                        
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://twitter.com/shopify" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Twitter</a></li>
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://facebook.com/shopify" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Facebook</a></li>
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://www.youtube.com/shopify" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">YouTube</a></li>
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="http://instagram.com/shopify" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Instagram</a></li>
+                        
+                        <li style="margin-bottom: 0.5rem; display: block;"><a href="https://pinterest.com/shopify" class="hover:text-[#6366f1] transition-colors duration-200" style="text-decoration: none; color: inherit; display: inline-block;" target="_blank" rel="noopener">Pinterest</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 md:pt-8 mb-6 md:mb-8" style="border-top: 1px solid rgba(55, 65, 81, 0.5); padding-top: 1rem; margin-top: 1rem; margin-bottom: 1rem;">
+                <details>
+                    <summary class="cursor-pointer font-semibold text-sm hover:text-[#6366f1] transition-colors duration-200" style="cursor: pointer; font-weight: 600; font-size: 0.875rem; color: #4a4a4a;">Additional FAQ</summary>
+                    <div class="mt-4 space-y-3 md:space-y-4" style="margin-top: 1rem; display: block;">
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <p class="font-semibold text-sm mb-1" style="font-weight: 600; font-size: 0.875rem; color: #333; margin-bottom: 0.25rem;">Is Off-Grid AI suitable for all users?</p>
+                            <p class="text-sm leading-relaxed" style="font-size: 0.875rem; color: #555; line-height: 1.6;"><a href="https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide">Off-Grid AI</a> is particularly suited for privacy-focused individuals, those in preparedness communities, and users in off-grid or remote environments.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <p class="font-semibold text-sm mb-1" style="font-weight: 600; font-size: 0.875rem; color: #333; margin-bottom: 0.25rem;">What kind of tasks can I perform with the offline AI assistant?</p>
+                            <p class="text-sm leading-relaxed" style="font-size: 0.875rem; color: #555; line-height: 1.6;">The <a href="https://offgridai.io/blogs/news/how-privacy-focused-offline-ai-works-without-internet-a-technical-guide">offline AI assistant</a> can assist with a variety of tasks, including research, data analysis, and information retrieval, all without internet access.</p>
+                        </div>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 md:pt-8 text-center" style="border-top: 1px solid rgba(55, 65, 81, 0.5); text-align: center;">
+                <p class="text-sm" style="font-size: 0.875rem; color: #1a1a1a; margin: 0;">&copy; 2026 Off-Grid AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://storage.googleapis.com/sa-firebase-assets/o/global/js/extra.js"
+        integrity="sha384-TG87E867Lw8yPJ5xcbZPI0RvtnA7aoBJ1i9sRpI9KRaSnSHMn5m4O//7uCwogvtS"
+        crossorigin="anonymous"></script>
+</body>
+</html>
