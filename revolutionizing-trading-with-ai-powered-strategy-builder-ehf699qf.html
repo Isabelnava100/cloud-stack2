@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/searchatlas-favicon-1.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/searchatlas-favicon-1.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/searchatlas-favicon-1.png"/>
+    <title>Revolutionizing Trading with AI-Powered Strategy Builder</title>
+    <meta name="title" content="Revolutionizing Trading with AI-Powered Strategy Builder"/>
+    <meta name="description" content="Discover Horizon Trade for AI Trading Strategy Builder and No-Code Trading Bot that automate trade execution efficiently. Perfect for professional traders!"/>
+    <meta name="keywords" content="[&#x27;AI Trading Strategy Builder&#x27;, &#x27;No-Code Trading Bot&#x27;, &#x27;Automated Trade Execution&#x27;, &#x27;AI Trading Strategy Builder&#x27;, &#x27;No-Code Trading Bot&#x27;, &#x27;Automated Trade Execution&#x27;, &#x27;Horizon Trade&#x27;]"/>
+    <meta name="next-head-count" content="16"/>
+    <link rel="manifest" href="/favicon/site.webmanifest"/>
+    <meta name="msapplication-TileColor" content="#000000"/>
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml"/>
+    <meta name="theme-color" content="#000"/>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml"/>
+    <meta
+            property="og:image"
+            content="https://storage.googleapis.com/content-assistant-images-persistent/c96269f3-0e7c-4466-bce8-a79b50d41965.jpeg"/>
+    <meta property="og:type" content="website"/>
+<meta property="og:title" content="Revolutionizing Trading with AI-Powered Strategy Builder"/>
+<meta property="og:description" content="Discover Horizon Trade for AI Trading Strategy Builder and No-Code Trading Bot that automate trade execution efficiently. Perfect for professional traders!"/>
+<meta property="og:site_name" content="Horizon Trade"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Revolutionizing Trading with AI-Powered Strategy Builder"/>
+<meta name="twitter:description" content="Discover Horizon Trade for AI Trading Strategy Builder and No-Code Trading Bot that automate trade execution efficiently. Perfect for professional traders!"/>
+<meta name="twitter:image" content="https://storage.googleapis.com/content-assistant-images-persistent/c96269f3-0e7c-4466-bce8-a79b50d41965.jpeg"/>
+<meta name="robots" content="index, follow"/>
+
+    <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+    <link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/>
+    <link
+            href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/output.css"
+            rel="stylesheet">
+    <link
+            href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/extra.css"
+            rel="stylesheet">
+    <link
+            href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/fonts.css"
+            rel="stylesheet">
+    <style
+            data-href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap"></style>
+
+    <style>
+        .activeCard .chevron-icon {
+            transform: rotate(180deg);
+        }
+        /* Side-by-side card. The image cell (a flex item with no aspect ratio) stretches to the card
+           height and the image covers it, so it fills its column with no empty accent space. Long
+           copy is clamped with a Read more toggle (.cs-section-text). */
+        .sub-section {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 0;
+            margin: 40px 0;
+            padding: 0;
+            border-radius: 8px;
+            /* accent surface so the card contrasts with the primary-colored services section */
+            background-color: var(--cs-accent, #4A698E);
+            overflow: hidden;
+        }
+        .sub-section .text-content {
+            padding: 40px;
+            align-self: center;
+        }
+        .sub-section .cs-media {
+            width: 42%;
+            flex-shrink: 0;
+            align-self: stretch;
+        }
+        .sub-section .cs-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .sub-section .cs-section-text {
+            position: relative;
+            transition: max-height 0.4s ease;
+        }
+        /* The generated copy wraps each sentence in its own <p> AND puts a <br> between them, which
+           double-spaces the paragraphs. Drop the redundant <br> and use one tidy paragraph margin. */
+        .sub-section .cs-section-text p {
+            margin: 0 0 0.6rem;
+        }
+        .sub-section .cs-section-text br {
+            display: none;
+        }
+        .sub-section .cs-section-text.cs-clamped {
+            max-height: 11em;
+            overflow: hidden;
+        }
+        .sub-section .cs-section-text.cs-clamped::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2.5em;
+            background: linear-gradient(rgba(74, 105, 142, 0), var(--cs-accent, #4A698E));
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .sub-section.cs-expanded .cs-section-text.cs-clamped::after {
+            opacity: 0;
+        }
+        .cs-readmore-btn {
+            margin-top: 0.85rem;
+            background: none;
+            border: 0;
+            padding: 0;
+            font: inherit;
+            font-weight: 700;
+            color: inherit;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .cs-readmore-btn[hidden] {
+            display: none;
+        }
+        .left {
+            flex-direction: row;
+        }
+        .right {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+        @media (max-width: 768px) {
+            .sub-section {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .sub-section .text-content {
+                padding: 24px;
+            }
+            .sub-section .cs-media {
+                width: 100%;
+                height: 220px;
+                order: -1;
+            }
+        }
+    </style>
+
+    <style>
+        /* Release extra.css's navy gradient text-fill so the heading color paints. The #1d2a3e
+           below is a native primary hex, so the server's varize step rewrites it to
+           var(--cs-primary, #1d2a3e) and the chosen brand color recolors the headings. */
+        main h1, main h2, main h3 {
+            background: none !important;
+            -webkit-text-fill-color: currentColor !important;
+            -webkit-background-clip: border-box !important;
+            background-clip: border-box !important;
+            color: #1d2a3e !important;
+        }
+        /* Dark sections paint their own (also-primary) gradient background, so their headings
+           must stay white for contrast — never recolor them to the brand primary, or heading
+           and background collapse to the same color. */
+        main .darkSection h1, main .darkSection h2, main .darkSection h3 {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+    </style>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Horizon Trade",
+    "url": "https://horizon.trade/",
+    "description": "Discover Horizon Trade for AI Trading Strategy Builder and No-Code Trading Bot that automate trade execution efficiently. Perfect for professional traders!"
+}
+</script>
+
+</head>
+<body>
+<div id="__next">
+    <header>
+        <section
+                data-bs-version="5.1"
+                class="menu menu1 cid-t9fGzm7kMq py-7 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] fixed top-0 w-full z-40"
+                id="menu1-0">
+            <nav class="navbar navbar-expand-lg px-0">
+                <div class="container flex justify-between items-center">
+                    <div class="navbar-brand">
+                                <span class="navbar-caption-wrap" style="display: flex; align-items: center; gap: 10px;">
+                                    
+                                    <a class="navbar-caption text-white text-2xl display-7"
+                                       href="#bannerSection">Horizon Trade</a>
+                                </span>
+                    </div>
+                    <ul class="flex gap-12 text-xl text-white">
+                        
+                        <li>
+                            <a href="#faqSection">FAQ</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main class="overflow-hidden">
+        <section
+                id="bannerSection"
+                class="flex-col md:flex-row flex items-center justify-center header1 cid-t9fGBrS5Op mbr-fullscreen pt-10 lg:pt-56 pb-14 lg:pb-28">
+            <div class="container flex md:flex-row gap-12 lg:gap-32 flex-col">
+                <div class="flex-1 mt-14">
+                    <h1
+                            class="text-5xl font-bold tracking-tighter leading-tight md:pr-8 mbr-section-title mbr-fonts-style mb-3 display-1">
+                        Revolutionizing Trading with AI-Powered Strategy Builder</h1>
+                    <div class="opacity-[0.7]">
+                        <p>
+                            <a href="https://horizon.trade/">Horizon Trade</a> is redefining the landscape of trading by providing tools that empower professional traders to build, test, and automate their trading strategies effortlessly. Our <a href="https://horizon.trade/">no-code trading bot</a> allows for a highly visual approach, enabling users to set conditions, triggers, and actions without a single line of code. This means that no matter your trading style or experience level, you can leverage our platform to create winning strategies that work for you. With <a href="https://horizon.trade/">Horizon Trade</a>, <a href="https://horizon.trade/">automated trade execution</a> is at your fingertips, integrating seamlessly with major brokers for real-time performance.
+                            
+                        </p>
+                    </div>
+
+                </div>
+                <div class="flex-1 relative overflow-hidden" style="min-height: 400px;"><img
+                        class="absolute w-[100%] max-w-[100%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+                        src="https://storage.googleapis.com/content-assistant-images-persistent/c96269f3-0e7c-4466-bce8-a79b50d41965.jpeg"
+                        alt="">
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="darkSection flex justify-center relative video2 cid-t9j5IJrIY6 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] pt-10 lg:pt-20 pb-10 lg:pb-28">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="mbr-section-head flex justify-center" style="margin-top: 50px; margin-bottom: 70px;">
+                            <h2 class="text-4xl relative text-center font-bold display-1 mb-8 text-white">Empower Your Trading with Horizon Trade</h2>
+                        </div>
+                        
+                        <div class="sub-section left">
+                            <div class="text-content">
+                                <h3 class="text-xl font-bold mbr-fonts-style mb-3 display-7">Visual Strategy Builder for Seamless Creation</h3>
+                                <div class="cs-section-text opacity-[0.7]"><a href="https://horizon.trade/">Horizon Trade</a>’s Visual Strategy Builder empowers traders to design and implement strategies without the need for coding knowledge. With this intuitive interface, users can create complex strategies by simply dragging and dropping elements into place. Strategy conditions, triggers, and actions can be adjusted visually, offering a more accessible and flexible approach to trading strategy creation. Why struggle with coding when you can rely on our no-code solution for sophisticated strategy development?</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                            </div>
+                            
+                                <div class="cs-media"><img src="https://storage.googleapis.com/content-assistant-images-persistent/98257c7b-0f1c-45b5-88f6-7b3fd3874d47.jpeg" alt="Visual Strategy Builder for Seamless Creation" /></div>
+                            
+                        </div>
+                        
+                        <div class="sub-section right">
+                            <div class="text-content">
+                                <h3 class="text-xl font-bold mbr-fonts-style mb-3 display-7">Instant Backtesting with Historical Data</h3>
+                                <div class="cs-section-text opacity-[0.7]"><a href="https://horizon.trade/">Horizon Trade</a> provides instant backtesting capabilities that allow traders to evaluate their strategies using years of historical data. This feature is crucial for understanding how a strategy would perform under various market conditions, giving users insights like win rate, drawdown, and Sharpe ratio. Traders can fine-tune their strategies based on empirical data before going live, significantly increasing their chances of success. This isn’t just a simulation; it’s a powerful tool for data-driven decision-making.</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="sub-section left">
+                            <div class="text-content">
+                                <h3 class="text-xl font-bold mbr-fonts-style mb-3 display-7">AI-Powered Suggestions Simplifying Strategy Logic</h3>
+                                <div class="cs-section-text opacity-[0.7]">Incorporating AI-powered suggestions, <a href="https://horizon.trade/">Horizon Trade</a> redefines how traders can optimize their strategies. Users simply describe their strategy ideas in plain English, and our AI translates these into actionable trading logic. This innovative feature enhances the user experience by allowing traders to develop and refine strategies quickly and efficiently. By leveraging AI, traders can optimize their workflows, maintaining a competitive edge with minimal effort.</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                            </div>
+                            
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        <section
+                id="faqSection" data-cs-section="faq"
+                class="content16 flex justify-center cid-tNbUWJTv2K bg-gradient-to-r from-[#e9edf452] to-[#E9EDF4] pt-10 lg:pt-24 pb-10 lg:pb-28">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="mbr-section-head flex justify-center">
+                            <h2
+                                    class="relative w-fit text-4xl text-center font-bold mbr-section-title mb-14 mbr-fonts-style display-2">
+                                <img
+                                        class="absolute mt-1 w-[90%] max-w-[90%] top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+                                        src="data:image/png;base64,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"
+                                        alt="">Frequently Asked Questions</h2>
+                        </div>
+                        <div
+                                id="accordion_1"
+                                itemscope="itemscope"
+                                itemtype="https://schema.org/FAQPage"
+                                class="panel-group accordionStyles accordion flex flex-wrap items-start -mx-3"
+                                role="tablist"
+                                aria-multiselectable="true">
+                            
+
+                            <div class="flex-none w-full lg:w-1/2 p-3">
+                                <div
+                                        class="card py-5 pl-5 pr-14 rounded-xl border-2 border-[#29374e9e] bg-gradient-to-r from-[#8998af14] to-[#8998af0a] backdrop-blur-xl"
+                                        itemscope="itemscope"
+                                        itemprop="mainEntity"
+                                        itemtype="https://schema.org/Question">
+                                    <div class="card-header" role="tab">
+                                        <button class="panel-title flex items-center gap-5"><span
+                                                class="py-8 px-7 rounded-2xl bg-white font-bold"><span
+                                                class="px-3 py-1.5 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] text-white rounded-full">?</span></span>
+                                            <h3
+                                                    class="text-xl font-bold text-left mbr-fonts-style mb-0display-7"
+                                                    itemprop="name">
+                                                What is the Horizon Trade AI Trading Strategy Builder?
+                                                
+                                            </h3>
+                                            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 25px; min-width: 25px">
+                                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                            class="panel-body opacity-[0.7]"
+                                            itemscope="itemscope"
+                                            itemprop="acceptedAnswer"
+                                            itemtype="https://schema.org/Answer">
+                                        <div itemprop="text">
+                                            <p>
+                                                The <a href="https://horizon.trade/">Horizon Trade</a> <a href="https://horizon.trade/">AI Trading Strategy Builder</a> is a no-code platform that allows traders to create, test, and automate their trading strategies visually without prior coding knowledge.
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="flex-none w-full lg:w-1/2 p-3">
+                                <div
+                                        class="card py-5 pl-5 pr-14 rounded-xl border-2 border-[#29374e9e] bg-gradient-to-r from-[#8998af14] to-[#8998af0a] backdrop-blur-xl"
+                                        itemscope="itemscope"
+                                        itemprop="mainEntity"
+                                        itemtype="https://schema.org/Question">
+                                    <div class="card-header" role="tab">
+                                        <button class="panel-title flex items-center gap-5"><span
+                                                class="py-8 px-7 rounded-2xl bg-white font-bold"><span
+                                                class="px-3 py-1.5 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] text-white rounded-full">?</span></span>
+                                            <h3
+                                                    class="text-xl font-bold text-left mbr-fonts-style mb-0display-7"
+                                                    itemprop="name">
+                                                How does the No-Code Trading Bot work?
+                                                
+                                            </h3>
+                                            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 25px; min-width: 25px">
+                                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                            class="panel-body opacity-[0.7]"
+                                            itemscope="itemscope"
+                                            itemprop="acceptedAnswer"
+                                            itemtype="https://schema.org/Answer">
+                                        <div itemprop="text">
+                                            <p>
+                                                Our <a href="https://horizon.trade/">No-Code Trading Bot</a> enables users to visually set up trading conditions, triggers, and actions, allowing for <a href="https://horizon.trade/">automated trade execution</a> without any programming.
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="flex-none w-full lg:w-1/2 p-3">
+                                <div
+                                        class="card py-5 pl-5 pr-14 rounded-xl border-2 border-[#29374e9e] bg-gradient-to-r from-[#8998af14] to-[#8998af0a] backdrop-blur-xl"
+                                        itemscope="itemscope"
+                                        itemprop="mainEntity"
+                                        itemtype="https://schema.org/Question">
+                                    <div class="card-header" role="tab">
+                                        <button class="panel-title flex items-center gap-5"><span
+                                                class="py-8 px-7 rounded-2xl bg-white font-bold"><span
+                                                class="px-3 py-1.5 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] text-white rounded-full">?</span></span>
+                                            <h3
+                                                    class="text-xl font-bold text-left mbr-fonts-style mb-0display-7"
+                                                    itemprop="name">
+                                                Can I backtest my trading strategies?
+                                                
+                                            </h3>
+                                            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 25px; min-width: 25px">
+                                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                            class="panel-body opacity-[0.7]"
+                                            itemscope="itemscope"
+                                            itemprop="acceptedAnswer"
+                                            itemtype="https://schema.org/Answer">
+                                        <div itemprop="text">
+                                            <p>
+                                                Yes, <a href="https://horizon.trade/">Horizon Trade</a> offers instant backtesting using historical data, which provides essential performance metrics before live deployment.
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="flex-none w-full lg:w-1/2 p-3">
+                                <div
+                                        class="card py-5 pl-5 pr-14 rounded-xl border-2 border-[#29374e9e] bg-gradient-to-r from-[#8998af14] to-[#8998af0a] backdrop-blur-xl"
+                                        itemscope="itemscope"
+                                        itemprop="mainEntity"
+                                        itemtype="https://schema.org/Question">
+                                    <div class="card-header" role="tab">
+                                        <button class="panel-title flex items-center gap-5"><span
+                                                class="py-8 px-7 rounded-2xl bg-white font-bold"><span
+                                                class="px-3 py-1.5 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] text-white rounded-full">?</span></span>
+                                            <h3
+                                                    class="text-xl font-bold text-left mbr-fonts-style mb-0display-7"
+                                                    itemprop="name">
+                                                Is there support for major brokers?
+                                                
+                                            </h3>
+                                            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 25px; min-width: 25px">
+                                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                            class="panel-body opacity-[0.7]"
+                                            itemscope="itemscope"
+                                            itemprop="acceptedAnswer"
+                                            itemtype="https://schema.org/Answer">
+                                        <div itemprop="text">
+                                            <p>
+                                                Yes, <a href="https://horizon.trade/">Horizon Trade</a> integrates with major brokers like Alpaca, Binance, Kraken, Coinbase, and E*TRADE for real-time <a href="https://horizon.trade/">automated trade execution</a>.
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="flex-none w-full lg:w-1/2 p-3">
+                                <div
+                                        class="card py-5 pl-5 pr-14 rounded-xl border-2 border-[#29374e9e] bg-gradient-to-r from-[#8998af14] to-[#8998af0a] backdrop-blur-xl"
+                                        itemscope="itemscope"
+                                        itemprop="mainEntity"
+                                        itemtype="https://schema.org/Question">
+                                    <div class="card-header" role="tab">
+                                        <button class="panel-title flex items-center gap-5"><span
+                                                class="py-8 px-7 rounded-2xl bg-white font-bold"><span
+                                                class="px-3 py-1.5 bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] text-white rounded-full">?</span></span>
+                                            <h3
+                                                    class="text-xl font-bold text-left mbr-fonts-style mb-0display-7"
+                                                    itemprop="name">
+                                                What features enhance my trading strategy's effectiveness?
+                                                
+                                            </h3>
+                                            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 25px; min-width: 25px">
+                                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                            class="panel-body opacity-[0.7]"
+                                            itemscope="itemscope"
+                                            itemprop="acceptedAnswer"
+                                            itemtype="https://schema.org/Answer">
+                                        <div itemprop="text">
+                                            <p>
+                                                Key features include our visual strategy builder, instant backtesting, and AI-powered suggestions, all designed to enhance your trading performance with ease.
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer
+            id="footerSection"
+            class="darkSection flex justify-center bg-gradient-to-r from-[#2F3E57] to-[#1D2A3E] pt-20 pb-14">
+        <div class="container mx-auto">
+            <section class="footer2 cid-tNct9Z79rF text-white py-8">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap">
+                        <div class="w-full md:w-1/3 px-4">
+                            <ul class="z-10 relative pl-5">
+                                <li>
+                                    <a
+                                            href="https://horizon.trade/"
+                                            class="hover:underline"
+                                            target="_blank"
+                                            rel="noopener noreferrer">Revolutionizing Trading with AI-Powered Strategy Builder</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/3 px-4">
+                            <h5 class="text-lg font-bold mb-2">Useful Links</h5>
+                            <ul class="pl-5">
+                                
+
+                                
+                                <li class="mb-2">
+                                    <a href="https://git.searchatlasseo.com/terms-of-service.html" class="hover:underline" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                                </li>
+                                
+                                
+                                <li class="mb-2">
+                                    <a href="https://git.searchatlasseo.com/privacy-policy.html" class="hover:underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/3 px-4">
+                            <h5 class="text-lg font-bold mb-2">Follow us on Social Media</h5>
+                            <ul class="pl-5">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center" data-cs-section="extra-faq">
+                        <div class="col-12 col-md-10">
+                            <div id="accordion_2" class="panel-group accordionStyles accordion" role="tablist"
+                                 aria-multiselectable="true">
+                                <div class="card mb-3">
+                                    <div class="card-header text-right flex" style="justify-content: end;" role="tab">
+                                        <button class="panel-title flex">
+                                            <h6 class="mbr-fonts-style mb-0 display-7">Extra FAQ</h6>
+                                            <span class="text-white text-xl chevron-icon" style="display: inline-block;">▼</span>
+                                        </button>
+                                    </div>
+                                    <div class="panel-body">
+                                        <section>
+                                            
+                                            <b>
+                                                How accurate are the backtesting results?
+                                                
+                                            </b><br>
+                                            The backtesting results are based on extensive historical data and provide insights such as win rate, drawdown, and Sharpe ratio, giving a realistic performance overview.
+                                            
+                                            <br/><br/>
+                                            
+                                            <b>
+                                                Where can I read user reviews for Horizon Trade?
+                                                
+                                            </b><br>
+                                            You can find user reviews and platform ratings on our Capterra profile, which serves as a trusted source for feedback on our services.
+                                            
+                                            <br/><br/>
+                                            
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </footer>
+</div>
+<script src="https://storage.googleapis.com/sa-firebase-assets/o/global/js/extra.js"
+        integrity="sha384-TG87E867Lw8yPJ5xcbZPI0RvtnA7aoBJ1i9sRpI9KRaSnSHMn5m4O//7uCwogvtS"
+        crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        function setup() {
+            document.querySelectorAll('.cs-section-text').forEach(function (text) {
+                var card = text.closest('.sub-section, .case-study-card, .product-card, .feature-box, .service-card');
+                if (!card) return;
+                var btn = card.querySelector('.cs-readmore-btn');
+                if (!btn) return;
+                text.classList.add('cs-clamped');
+                if (text.scrollHeight - text.clientHeight > 4) {
+                    btn.hidden = false;
+                } else {
+                    text.classList.remove('cs-clamped');
+                }
+                btn.addEventListener('click', function () {
+                    var expanded = card.classList.toggle('cs-expanded');
+                    text.style.maxHeight = expanded ? text.scrollHeight + 'px' : '';
+                    btn.textContent = expanded ? 'Read less' : 'Read more';
+                });
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setup);
+        } else {
+            setup();
+        }
+    })();
+</script>
+
+</body>
+</html>
