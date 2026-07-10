@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/searchatlas-favicon-1.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/searchatlas-favicon-1.png"/>
+    <title>Harnessing AI Search Authority for Enhanced Digital Presence</title>
+    <meta name="title" content="Harnessing AI Search Authority for Enhanced Digital Presence"/>
+    <meta name="description" content="Explore AI Search Authority at Elite AEO Labs. Elevate your enterprise through tailored search optimization strategies that enhance digital visibility and stimulate growth."/>
+    <meta name="keywords" content="[&#x27;AI Search Authority&#x27;, &#x27;AI Search Authority&#x27;, &#x27;business growth AI&#x27;, &#x27;optimize business search&#x27;, &#x27;Elite AEO Labs&#x27;]"/>
+    <meta name="theme-color" content="#0f172a"/>
+    <meta property="og:image" content="https://storage.googleapis.com/content-assistant-images-persistent/d8d56521-57ab-4338-9e2d-f82cc2d63398.png"/>
+    <meta property="og:type" content="website"/>
+<meta property="og:title" content="Harnessing AI Search Authority for Enhanced Digital Presence"/>
+<meta property="og:description" content="Explore AI Search Authority at Elite AEO Labs. Elevate your enterprise through tailored search optimization strategies that enhance digital visibility and stimulate growth."/>
+<meta property="og:site_name" content="Elite AEO Labs"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Harnessing AI Search Authority for Enhanced Digital Presence"/>
+<meta name="twitter:description" content="Explore AI Search Authority at Elite AEO Labs. Elevate your enterprise through tailored search optimization strategies that enhance digital visibility and stimulate growth."/>
+<meta name="twitter:image" content="https://storage.googleapis.com/content-assistant-images-persistent/d8d56521-57ab-4338-9e2d-f82cc2d63398.png"/>
+<meta name="robots" content="index, follow"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/output.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/sa-firebase-assets/o/global/css/extra.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Agency/Professional Styles */
+        body { font-family: 'Inter', sans-serif; }
+        .agency-btn-primary {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            width: 100%;
+            text-align: center;
+        }
+        .agency-btn-primary:hover {
+            background: transparent;
+            border-color: #0f172a;
+            color: #0f172a;
+        }
+        .agency-btn-secondary {
+            background: transparent;
+            border: 2px solid #475569;
+            color: #475569;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .agency-btn-secondary:hover {
+            background: #475569;
+            border-color: #475569;
+            color: white;
+        }
+        .case--st-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+            border-left: 4px solid #0f172a;
+            transition: all 0.3s;
+        }
+        .buttons {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-left: 0;
+        }
+        @media (max-width: 786px) {
+            .buttons {
+                flex-direction: row;
+                gap: 1.25rem;
+            }
+        }
+        /* On small phones the row above (two CTA pills ≈ 368px) overflows the viewport and, because
+           the hero columns are flex items with the default min-width:auto, it stops the whole text
+           column from shrinking — clipping the hero on both sides at 320px. Stack the buttons
+           full-width and let the hero columns shrink. */
+        @media (max-width: 600px) {
+            #bannerSection .flex-1 {
+                min-width: 0;
+                width: 100%;
+            }
+            #bannerSection .buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.75rem;
+            }
+            #bannerSection .buttons a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+        .case-study-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06); /* lift the card off the white section */
+        }
+        .case-study-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.12);
+        }
+        /* The image cell fills its column and the image covers it; the cell stretches to the card
+           height alongside the text. */
+        /* Show the FULL image (no crop) — height:auto + centered so expanding the Read-more text
+           (which grows the card) never crops the image, and it isn't object-fit:cover'd to the
+           text-driven column height. */
+        .case-study-card .cs-media {
+            align-self: center;
+        }
+        .case-study-card .cs-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .case-study-card .cs-section-text {
+            position: relative;
+            transition: max-height 0.4s ease;
+        }
+        /* The generated copy wraps each sentence in its own <p> AND puts a <br> between them, which
+           double-spaces the paragraphs. Drop the redundant <br> and use one tidy paragraph margin. */
+        .case-study-card .cs-section-text p {
+            margin: 0 0 0.6rem;
+        }
+        .case-study-card .cs-section-text.cs-clamped {
+            max-height: 11em;
+            overflow: hidden;
+        }
+        .case-study-card .cs-section-text.cs-clamped::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2.5em;
+            background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .case-study-card.cs-expanded .cs-section-text.cs-clamped::after {
+            opacity: 0;
+        }
+        .cs-readmore-btn {
+            display: block;
+            margin-top: 0.85rem;
+            background: none;
+            border: 0;
+            padding: 0;
+            font: inherit;
+            font-weight: 700;
+            color: #111827;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .cs-readmore-btn[hidden] {
+            display: none;
+        }
+        .case-study-card .cs-cta {
+            display: inline-block;
+            margin-top: 1.25rem;
+            padding: 0.65rem 1.5rem;
+            background: #0f172a;
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .case-study-card .cs-cta:hover {
+            background: #1e293b;
+        }
+        .hero-image-wrapper {
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        @media (min-width: 640px) {
+            .hero-image-wrapper {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+        }
+        @media (min-width: 768px) {
+            .hero-image-wrapper {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-image-wrapper {
+                padding: 2.5rem;
+                margin: 2.5rem 0;
+            }
+        }
+        .hero-image-container {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+            padding: 0.5rem;
+        }
+        @media (min-width: 768px) {
+            .hero-image-container {
+                padding: 1rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-image-container {
+                padding: 1.5rem;
+            }
+        }
+        /* The nested wrapper + container padding (up to ~64px/side) shrank the full image too much;
+           trim it so the image fills its column and displays at a proper size. */
+        .hero-image-wrapper { padding: 0 !important; margin: 0.5rem 0 !important; }
+        .hero-image-container { padding: 0 !important; }
+        /* Show the FULL hero image (no crop) — was min-height + object-fit:cover which cropped it. */
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .hero-image-container img {
+                min-height: 0;
+                max-height: none;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-image-container img {
+                min-height: 0;
+                max-height: none;
+            }
+        }
+        .activeCard .chevron-icon { transform: rotate(180deg); }
+        .panel-body {
+            display: none;
+        }
+        .activeCard .panel-body {
+            display: block;
+        }
+        .panel-title {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 100%;
+        }
+    </style>
+    <style>
+        /* Section titles mix text-5xl/text-4xl/text-3xl and font-black/font-bold, and the weight +
+           responsive (md:/lg:) utilities are purged from the shared output.css — so headings render
+           at inconsistent sizes (48px vs 36px) and fall back to weight 400. Pin every content h2 to
+           one consistent size + weight. */
+        main h2 {
+            font-size: 3rem !important;
+            font-weight: 700 !important;
+            line-height: 1.15 !important;
+        }
+
+        /* py-16/20/24 section-spacing utilities are also purged from output.css, so the CTA and
+           location sections lose their vertical padding and the heading hugs the top. Restore
+           comfortable spacing (Standard Authority keeps pt-10/pb-10, which survive). */
+        #contactSection,
+        #locationSection {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+        /* The service cards have no internal padding (their inner .m-4 utility is purged from
+           output.css), so the text sits flush against the card edges. Pad only the text column —
+           the image (md:w-1/3) stays flush. */
+        .case-study-card .flex-1 {
+            padding: 1.5rem !important;
+        }
+
+        /* Alternate the service cards left↔right for a zigzag layout (text-image, image-text, …).
+           Cards are image-first in the DOM, so reversing the even ones moves the image to the right.
+           ONLY at lg+ where the cards are side-by-side — below that they stack (image on top), and an
+           unconditional row-reverse here would override that flex-col and keep them side-by-side on
+           mobile (the "should be top-down" bug). */
+        @media (min-width: 1024px) {
+            /* go side-by-side at lg+ (the lg:flex-row utility isn't in the purged CSS, so set it here;
+               below lg the card stays flex-col = stacked, image on top). */
+            .case-study-card > div {
+                flex-direction: row;
+            }
+            .case-study-card:nth-child(even) > div {
+                flex-direction: row-reverse !important;
+            }
+            /* side-by-side: image takes a third (lg:w-1/3 also isn't in the purged CSS). */
+            .case-study-card .cs-media {
+                width: 33.3333%;
+                flex-shrink: 0;
+            }
+        }
+        /* The big section headings (Expertise / Process / Questions) are a fixed text-5xl (48px) with
+           no responsive downscale, so a long word like "Understanding" overflows narrow phones. */
+        @media (max-width: 767px) {
+            #expertiseSection h2.text-5xl,
+            #videoSection h2.text-5xl,
+            #faqSection h2.text-5xl {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+                overflow-wrap: break-word;
+            }
+        }
+
+        /* The shared extra.css paints ALL headings with a navy gradient via
+           -webkit-text-fill-color: transparent, which makes each heading's own `color` invisible.
+           The builder recolors headings by var-izing that `color` (#0f172a -> var(--cs-primary)),
+           so the transparent fill must be released for content headings — otherwise the brand
+           color never shows (it only LOOKS right here because the gradient navy ≈ the primary navy).
+           Footer h5s are intentionally excluded. */
+        main h1,
+        main h2,
+        main h3 {
+            background: none !important;
+            -webkit-text-fill-color: currentColor !important;
+            -webkit-background-clip: border-box !important;
+            background-clip: border-box !important;
+        }
+
+        /* The footer's bg-[#0a0f1a] arbitrary utility is purged from the shared output.css, leaving
+           the footer transparent — its light text then sits on the page background (unreadable) and
+           it follows a selected Background instead of staying a stable dark band. Pin the dark
+           footer + light text directly: this renders correctly and is excluded from the Background
+           recolor (the builder only repaints html/body + bg-white/bg-gray-50.. surfaces). */
+        footer {
+            background-color: #475569 !important;
+            padding-top: 3.5rem !important;
+            padding-bottom: 2.5rem !important;
+        }
+        footer h1,
+        footer h2,
+        footer h3,
+        footer h4,
+        footer h5,
+        footer h6 {
+            background: none !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        footer p,
+        footer a,
+        footer li,
+        footer span,
+        footer summary {
+            color: #ffffff !important;
+        }
+    </style>
+    
+<style data-cs-responsive="1">
+/* overflow guardrails (all widths): a too-wide element — a decorative 200%-width heading image, an
+   embed, or media — must never force a page horizontal scrollbar / white gutter. clip (NOT hidden)
+   so the fixed/sticky headers keep working. */
+html,body{overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+/* base gap-* (purged from output.css) */
+.gap-2{gap:0.5rem}
+.gap-4{gap:1rem}
+.gap-5{gap:1.25rem}
+.gap-6{gap:1.5rem}
+.gap-8{gap:2rem}
+.gap-10{gap:2.5rem}
+.gap-12{gap:3rem}
+.gap-16{gap:4rem}
+@media(min-width:768px){.md\:flex-row{flex-direction:row}.md\:gap-10{gap:2.5rem}.md\:gap-12{gap:3rem}.md\:gap-16{gap:4rem}.md\:gap-6{gap:1.5rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:mb-10{margin-bottom:2.5rem}.md\:mb-12{margin-bottom:3rem}.md\:mb-16{margin-bottom:4rem}.md\:mb-20{margin-bottom:5rem}.md\:mb-4{margin-bottom:1rem}.md\:mb-6{margin-bottom:1.5rem}.md\:mb-8{margin-bottom:2rem}.md\:mt-5{margin-top:1.25rem}.md\:p-4{padding:1rem}.md\:p-6{padding:1.5rem}.md\:pb-20{padding-bottom:5rem}.md\:pb-24{padding-bottom:6rem}.md\:pr-8{padding-right:2rem}.md\:pt-32{padding-top:8rem}.md\:pt-8{padding-top:2rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:py-28{padding-top:7rem;padding-bottom:7rem}.md\:py-2{padding-top:0.5rem;padding-bottom:0.5rem}.md\:py-3{padding-top:0.75rem;padding-bottom:0.75rem}.md\:space-y-4 > :not([hidden]) ~ :not([hidden]){margin-top:1rem}.md\:space-y-5 > :not([hidden]) ~ :not([hidden]){margin-top:1.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-left{text-align:left}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:w-1\/3{width:33.333333%}.md\:w-auto{width:auto}}
+/* Mobile header: the Mobirise navbar-expand-lg markup ships no hamburger/JS, so below the lg
+   breakpoint the brand + nav links + CTA overflow the viewport and the fixed header can cover the
+   hero title. Stack the header (brand on its own row, nav wraps centered beneath) and clear the
+   hero. Scoped to <header>, so it never touches page content. */
+@media(max-width:767px){
+/* page-level guard: a nav/CTA wider than the phone viewport (the fixed header sits outside
+   main's own overflow clip) must never force horizontal scroll. clip (not hidden) so agency's
+   sticky header keeps working. */
+html,body{overflow-x:clip;max-width:100%}
+.navbar>.container{flex-wrap:wrap;justify-content:center;text-align:center;row-gap:0.5rem}
+header .navbar-brand{width:100%;display:flex;justify-content:center}
+header .navbar-caption{font-size:1.05rem !important;line-height:1.2}
+header .navbar-brand img{height:36px !important;width:auto}
+header nav ul{width:100%;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.5rem 0.9rem !important;font-size:0.9rem !important}
+#bannerSection,.header1{padding-top:6.5rem !important}
+/* Hero columns: when the hero stacks (flex-col + items-center), a .flex-1 sizes to its content's max
+   width and (min-width:auto) won't shrink, so long paragraphs/headings overflow and clip on the right.
+   Force full width + shrinkable on mobile so the text wraps to the viewport. */
+#bannerSection .flex-1{width:100% !important;min-width:0}
+}
+@media(min-width:1024px){.lg\:gap-12{gap:3rem}.lg\:gap-16{gap:4rem}.lg\:gap-20{gap:5rem}.lg\:gap-32{gap:8rem}.lg\:gap-8{gap:2rem}.lg\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:mb-16{margin-bottom:4rem}.lg\:mb-20{margin-bottom:5rem}.lg\:p-8{padding:2rem}.lg\:pb-24{padding-bottom:6rem}.lg\:pb-28{padding-bottom:7rem}.lg\:pb-44{padding-bottom:11rem}.lg\:pt-20{padding-top:5rem}.lg\:pt-24{padding-top:6rem}.lg\:pt-56{padding-top:14rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:py-28{padding-top:7rem;padding-bottom:7rem}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:w-1\/2{width:50%}}
+</style>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elite AEO Labs",
+    "url": "https://eliteaeolabs.com/",
+    "description": "Explore AI Search Authority at Elite AEO Labs. Elevate your enterprise through tailored search optimization strategies that enhance digital visibility and stimulate growth."
+}
+</script>
+
+</head>
+<body style="background: #ffffff;">
+    <header>
+        <section class="menu menu1 cid-agency sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+            <nav class="navbar navbar-expand-lg px-0 py-5">
+                <div class="container mx-auto flex justify-between items-center px-4">
+                    <div class="navbar-brand">
+                        <span class="navbar-caption-wrap" style="display: flex; align-items: center; gap: 10px;">
+                            
+                            <a class="navbar-caption text-2xl font-black tracking-tight display-7" style="color: #111827;" href="#bannerSection">Elite AEO Labs</a>
+                        </span>
+                    </div>
+                    <ul class="flex gap-6 md:gap-10 items-center text-xs md:text-sm font-semibold uppercase tracking-wide" style="color: #475569;gap: 6px">
+                        <li><a href="#expertiseSection" class="hover:text-[#111827] transition">Expertise</a></li>
+                        <li><a href="#faqSection" class="hover:text-[#111827] transition">FAQ</a></li>
+                        
+                        <li><a href="#contactSection" class="agency-btn-primary text-xs md:text-sm px-4 py-2 md:px-6 md:py-3">Get Started</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    
+    <main>
+        <!-- Hero Section with Credibility -->
+        <section id="bannerSection" class="pt-32 pb-20" style="margin-top: 80px; padding-bottom: 3rem;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="flex md:flex-row gap-16 flex-col items-center m-2">
+                    <div class="flex-1">
+                        <div class="mb-6" style="margin-bottom: 1.5rem; display: block;">
+                            <span class="text-sm font-bold uppercase tracking-wider px-4 py-2 text-white rounded" style="background: #475569; display: inline-block;">Trusted by Industry Leaders</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6" style="color: #0f172a; margin-bottom: 10px; font-size: 36px; font-weight: bold;">
+                            Harnessing AI Search Authority for Enhanced Digital Presence
+                        </h1>
+                        <p class="text-xl mb-8 leading-relaxed" style="color: #1a1a1a;">
+                            <p>AI search platforms such as ChatGPT, Perplexity, and Google's AI Insights don’t simply produce ranked listings. Instead, they curate reliable information based on structured, machine-readable authority signals. Companies that depend solely on conventional keyword rankings while neglecting entity signals, structured data, and cloud-centered content frameworks are effectively overlooked by these AI systems, irrespective of their standing on Google. Establishing a robust AI search authority relies on a strategic technical infrastructure: optimizing entities, designing structured retrieval systems, and creating supporting content structures that provide clear and verifiable signals to AI engines. Organizations investing in this framework generally observe visibility in AI-curated responses within a span of 60 to 90 days; neglecting this approach may lead to a failure to appear in the very marketplaces where consumers are making purchasing decisions.<br><br><br></p>
+                        </p>
+                        <div class="buttons" style="margin-bottom: 2rem;">
+                            <a href="https://eliteaeolabs.com/" class="agency-btn-primary text-lg" target="_blank" rel="noopener">
+                                Schedule Consultation
+                            </a>
+                            <a href="#expertiseSection" class="agency-btn-secondary text-lg">
+                                View Our Expertise
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-1 hero-image-wrapper">
+                        <div class="hero-image-container">
+                            <img class="rounded-2xl shadow-2xl" src="https://storage.googleapis.com/content-assistant-images-persistent/d8d56521-57ab-4338-9e2d-f82cc2d63398.png" alt="Harnessing AI Search Authority for Enhanced Digital Presence">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise/Services Section -->
+        
+        <section id="expertiseSection" data-cs-section="services" data-cs-heading="ai" class="py-24" style="padding-top: 3rem; margin-top: 1rem;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-black mb-4" style="color: #0f172a;">AI Search Authority: Fostering Business Advancement</h2>
+                    <p class="text-xl" style="color: #6b7280; padding: 15px;">Our core competencies</p>
+                </div>
+                <div class="space-y-6">
+                    
+                    <div class="case-study-card">
+                        <div class="flex lg:flex-row flex-col items-stretch" style="gap: 0;">
+                            
+                            <div class="lg:w-1/3 cs-media">
+                                <img src="https://storage.googleapis.com/content-assistant-images-persistent/5113eded-3cdc-426a-afab-3e7475edd25e.jpeg" alt="What is AI Search Authority?"/>
+                            </div>
+                            
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-3" style="color: #1a1a1a;">What is AI Search Authority?</h3>
+                                <div class="cs-section-text text-lg leading-relaxed" style="color: #1a1a1a;"><a href="https://eliteaeolabs.com/">AI Search Authority</a> refers to methodologies and tools that boost a company’s visibility on the internet through artificial intelligence. By exploiting algorithms, large-scale data analytics, and machine learning capabilities, businesses can refine their marketing approaches. The essential objective is to elevate companies in search engine rankings, thus attracting more prospective clients. Organizations that leverage this authority stand a better chance of thriving within the digital realm, circumventing the danger of obscurity.</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                                <a href="#contactSection" class="cs-cta">Learn More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-card">
+                        <div class="flex lg:flex-row flex-col items-stretch" style="gap: 0;">
+                            
+                            <div class="lg:w-1/3 cs-media">
+                                <img src="https://storage.googleapis.com/content-assistant-images-persistent/1050bb88-ab73-4a2a-b15c-d82f40f2eeae.jpeg" alt="Gains from Integrating AI into Search Methods"/>
+                            </div>
+                            
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-3" style="color: #1a1a1a;">Gains from Integrating AI into Search Methods</h3>
+                                <div class="cs-section-text text-lg leading-relaxed" style="color: #1a1a1a;">Incorporating AI into search methodologies provides a multitude of benefits, such as enhanced outcome precision and improved user engagement experiences. AI efficiently processes extensive datasets quickly, delivering insights that inform better business decisions. Targeting capabilities improve, ensuring marketing initiatives connect with appropriate audiences, thereby boosting interaction and conversion rates. The application of AI enables perpetual enhancements, streamlining business search strategies.</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                                <a href="#contactSection" class="cs-cta">Learn More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-card">
+                        <div class="flex lg:flex-row flex-col items-stretch" style="gap: 0;">
+                            
+                            <div class="lg:w-1/3 cs-media">
+                                <img src="https://storage.googleapis.com/content-assistant-images-persistent/2c935ac9-e905-430d-bd58-f85a7a55319f.jpeg" alt="Our Strategy to Foster AI Search Authority at Elite AEO Labs"/>
+                            </div>
+                            
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-3" style="color: #1a1a1a;">Our Strategy to Foster AI Search Authority at Elite AEO Labs</h3>
+                                <div class="cs-section-text text-lg leading-relaxed" style="color: #1a1a1a;">At <a href="https://eliteaeolabs.com/">Elite AEO Labs</a>, we implement a personalized technique to <a href="https://eliteaeolabs.com/">AI Search Authority</a>, specifically tailored to accommodate the distinct requirements of each client. Our specialists apply cutting-edge AI technologies to enhance search tactics that substantially elevate traffic and conversion metrics. We prioritize the seamless incorporation of AI into your current systems, providing a hassle-free transition. By collaborating with us, firms can harness expertise and tools that drive sustainable growth and achieve success.</div>
+                                <button type="button" class="cs-readmore-btn" hidden>Read more</button>
+                                <a href="#contactSection" class="cs-cta">Learn More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+        <!-- FAQ Section -->
+        <section id="faqSection" data-cs-section="faq" class="py-24" style="padding-top: 5rem; padding-bottom: 5rem;">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16" style="margin-bottom: 3rem;">
+                    <h2 class="text-5xl font-black" style="color: #0f172a;">Common Questions</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-4" style="display: flex; flex-direction: column; gap: 12px;">
+                    <div id="accordion_1" itemscope itemtype="https://schema.org/FAQPage" class="mb-2" style="display: flex; flex-direction: column; gap: 12px;">
+                        
+                        <div style="padding: 1.5rem; margin-bottom: 0;" class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-[#111827] transition"
+                             itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="panel-title flex items-center justify-between w-full text-left" onclick="this.closest('.border-2').classList.toggle('activeCard')">
+                                <h3 class="text-lg font-bold pr-4" itemprop="name" style="color: #1a1a1a; margin: 0; font-weight: 700;">
+                                     What methods do AI retrieval systems like Perplexity and ChatGPT use to determine worthiness of citation - and is schema markup a direct influencing factor? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #666;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin-top: 1rem;">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"> Perplexity employs a RAG (retrieval-augmented generation) system that indexes content within a vector database and retrieves semantically relevant information during the query process. ChatGPT additionally utilizes browsing features and real-time plugins aligned with a similar retrieval framework. Schema markup, specifically JSON-LD, doesn’t physically enter the vector index; however, it provides key benefits: mitigating ambiguity during entity resolution (allowing AI systems to accurately identify the nature of your organization) and establishing structured, extractable content units (notably FAQPage and HowTo schema) that correspond cleanly with retrieval query trends. This indirect influence on citation likelihood is substantial, especially for queries where the AI must ascertain the authoritative source before producing a response. </p>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; margin-bottom: 0;" class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-[#111827] transition"
+                             itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="panel-title flex items-center justify-between w-full text-left" onclick="this.closest('.border-2').classList.toggle('activeCard')">
+                                <h3 class="text-lg font-bold pr-4" itemprop="name" style="color: #1a1a1a; margin: 0; font-weight: 700;">
+                                     How does traditional SEO internal linking differ from internal link systems designed for AI cranes? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #666;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin-top: 1rem;">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"> Traditional SEO internal linking chiefly deals with PageRank distribution and ensuring comprehensive crawl coverage — thus guaranteeing all pages are indexed and directing link equity to priority pages. In contrast, AI crawler optimization introduces a semantic dimension: the anchor text, contextual relevance, and topical correlations between linked content convey entities and authority relationships to AI systems crafting knowledge representations of your site. Internal links labeled 'click here' may be crawlable, but they lack semantic richness. Links that state 'our structured data engagement approach' within a discussion on schema strategies actively communicate entity linkage between the source page and the destination. When applied broadly, this develops a machine-readable map of authority, beyond mere crawl pathways. </p>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; margin-bottom: 0;" class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-[#111827] transition"
+                             itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="panel-title flex items-center justify-between w-full text-left" onclick="this.closest('.border-2').classList.toggle('activeCard')">
+                                <h3 class="text-lg font-bold pr-4" itemprop="name" style="color: #1a1a1a; margin: 0; font-weight: 700;">
+                                     What metrics can we use to gauge AI search authority - which indicators confirm advancement, as traditional rank tracking may no longer apply? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #666;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin-top: 1rem;">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"> Professionals utilizing structured retrieval optimization methods keep track of various proxy signals: instances of direct citations in AI-generated content, Knowledge Panel existence and completeness scores, entity resolution consistency across distinct data frameworks, and passage-level retrievability metrics, gauged by whether critical sections correspond to answers in semantic search inquiries. Gartner has highlighted the increasing discrepancy between conventional SERP performance metrics and the new-age metrics reflecting AI surfaces – the correlation is not reliable between these two. This indicates that organizations necessitate parallel measurement strategies. At Elite AEO Labs, the AEO Blocker Audit creates a baseline across these parameters prior to commencing optimization efforts, ensuring that progress can be accurately evaluated against a specific starting point rather than vague standards. </p>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; margin-bottom: 0;" class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-[#111827] transition"
+                             itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="panel-title flex items-center justify-between w-full text-left" onclick="this.closest('.border-2').classList.toggle('activeCard')">
+                                <h3 class="text-lg font-bold pr-4" itemprop="name" style="color: #1a1a1a; margin: 0; font-weight: 700;">
+                                     Are there any instances where this approach fails, or cases where the timeframe for achieving results is substantially elongated? 
+                                </h3>
+                                <svg class="chevron-icon transition-transform duration-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; min-width: 24px; height: 24px; fill: #666;">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </button>
+                            <div class="panel-body mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin-top: 1rem;">
+                                <p itemprop="text" class="text-base md:text-lg leading-relaxed" style="color: #6b7280; line-height: 1.7;"> Absolutely, and it's important to be upfront about this. For businesses possessing minimal content histories — with few indexed pages, a lack of established authority signals, and no recognized entity representation — the creation of supporting content structures tends to require additional time since AI systems need sufficient proof of topical depth before regarding a source as reliably citable. In particularly competitive industries where existing companies boast extensive structured authority signals, new participants should be ready for a timeline of 90 to 180 days before they consistently appear in AI citations. Furthermore, if a firm’s corporate identity shares terminology with a leading entity from a separate industry (which often leads to entity disambiguation conflicts), overcoming this ambiguity can call for considerable effort across different structured data sources to assist AI systems in daily distinguishing the company from the overshadowing entity. The AEO Blocker Audit is crafted to highlight these complications before resources are invested, ensuring that the timeline for implementation is tailored to the actual structural considerations rather than an over-optimistic assumption. </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location/Map Section -->
+        
+
+        <!-- Professional CTA -->
+        <section id="contactSection" data-cs-section="contact" class="py-24">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6" style="color: #0f172a; margin-bottom: 1.25rem;">Let's Build Something Great Together</h2>
+                    <p class="text-2xl mb-10" style="color: #6b7280; margin-bottom: 2.5rem;">We'd love to hear from you</p>
+                    <div class="flex justify-center mb-8">
+                        <a href="mailto:brett.a.franks@gmail.com" class="px-14 py-5 rounded-lg text-xl font-bold hover:shadow-2xl transition" style="background: #0f172a; color: #ffffff; text-decoration: none; display: inline-block; padding: 1rem 3rem; border-radius: 10px; font-size: 1.125rem;">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0a0f1a] text-white py-12">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <h5 class="text-2xl font-black mb-4" style="color: #0f172a;">Elite AEO Labs</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed" style="color: #475569;">Harnessing AI Search Authority for Enhanced Digital Presence</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4 text-gray-200" style="color: #0f172a;">Contact</h5>
+                    <ul class="space-y-2 text-sm text-gray-400" style="color: #475569;">
+                        
+                        <li class="flex items-center gap-2" style="padding-bottom: 5px;">
+                            <svg style="width: 25px; height: 25px; padding-right: 5px; fill: #ffffff;" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <a href="mailto:brett.a.franks@gmail.com" class="text-gray-400 hover:text-white transition" style="color: #475569; text-decoration: none;">brett.a.franks@gmail.com</a>
+                        </li>
+                        
+                        
+                        <li class="flex items-center gap-2" style="padding-bottom: 5px;">
+                            <svg style="width: 25px; height: 25px; padding-right: 5px; fill: #ffffff;" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span style="color: #475569;">00000000000</span>
+                        </li>
+                        
+                        
+                        <li class="flex items-center gap-2" style="padding-bottom: 5px;">
+                            <svg style="width: 25px; height: 25px; padding-right: 5px; fill: #ffffff;" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="https://eliteaeolabs.com/" class="text-gray-400 hover:text-white transition" target="_blank" rel="noopener" style="color: #475569; text-decoration: none;">Elite AEO Labs</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4 text-gray-200" style="color: #0f172a;">Resources</h5>
+                    <ul class="space-y-2 text-sm text-gray-400" style="color: #475569;">
+                        
+                        
+                        <li style="padding-bottom: 5px;"><a href="https://git.searchatlasseo.com/terms-of-service.html" class="text-gray-400 hover:text-white transition" target="_blank" rel="noopener" style="color: #475569; text-decoration: none;">Terms</a></li>
+                        
+                        
+                        <li style="padding-bottom: 5px;"><a href="https://git.searchatlasseo.com/privacy-policy.html" class="text-gray-400 hover:text-white transition" target="_blank" rel="noopener" style="color: #475569; text-decoration: none;">Privacy</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center" style="border-top: 1px solid rgba(55, 65, 81, 0.5); padding-bottom: 10px; padding-top: 10px;">
+                <p class="text-sm" style="color: #1a1a1a;">&copy; 2026 Elite AEO Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://storage.googleapis.com/sa-firebase-assets/o/global/js/extra.js"
+        integrity="sha384-TG87E867Lw8yPJ5xcbZPI0RvtnA7aoBJ1i9sRpI9KRaSnSHMn5m4O//7uCwogvtS"
+        crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        function setup() {
+            document.querySelectorAll('.cs-section-text').forEach(function (text) {
+                var card = text.closest('.sub-section, .case-study-card, .product-card, .feature-box, .service-card');
+                if (!card) return;
+                var btn = card.querySelector('.cs-readmore-btn');
+                if (!btn) return;
+                text.classList.add('cs-clamped');
+                if (text.scrollHeight - text.clientHeight > 4) {
+                    btn.hidden = false;
+                } else {
+                    text.classList.remove('cs-clamped');
+                }
+                btn.addEventListener('click', function () {
+                    var expanded = card.classList.toggle('cs-expanded');
+                    text.style.maxHeight = expanded ? text.scrollHeight + 'px' : '';
+                    btn.textContent = expanded ? 'Read less' : 'Read more';
+                });
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setup);
+        } else {
+            setup();
+        }
+    })();
+</script>
+
+</body>
+</html>
